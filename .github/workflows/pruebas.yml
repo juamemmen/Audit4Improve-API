@@ -12,6 +12,7 @@ jobs:
     runs-on: ubuntu-latest
     env:
       GITHUB_LOGIN: "juamemmen"
+      
       GITHUB_PACKAGES: "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"
       GITHUB_OAUTH: "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"
     steps:
