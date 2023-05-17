@@ -11,10 +11,9 @@ jobs:
   Build:
     runs-on: ubuntu-latest
     env:
-      GITHUB_LOGIN: "juamemmen"
-      
-      GITHUB_PACKAGES: "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"
-      GITHUB_OAUTH: "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"
+      GITHUB_LOGIN: ${{ github.actor }}
+      GITHUB_PACKAGES: ${{ secrets.GITHUB_TOKEN }}
+      GITHUB_OAUTH: ${{ secrets.GITHUB_TOKEN }}
     steps:
       - name: Clonando el repositorio y estableciendo el espacio de trabajo
         uses: actions/checkout@v3
@@ -32,9 +31,9 @@ jobs:
     runs-on: ubuntu-latest
     needs: Build
     env:
-      GITHUB_LOGIN: "juamemmen"
-      GITHUB_PACKAGES: "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"
-      GITHUB_OAUTH: "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"
+      GITHUB_LOGIN: ${{ github.actor }}
+      GITHUB_PACKAGES: ${{ secrets.GITHUB_TOKEN }}
+      GITHUB_OAUTH: ${{ secrets.GITHUB_TOKEN }}
     steps:
       - name: Clonando el repositorio y estableciendo el espacio de trabajo
         uses: actions/checkout@v3
