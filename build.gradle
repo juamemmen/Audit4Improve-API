@@ -25,8 +25,10 @@ plugins {
 publishing {
     repositories {
         maven {
+
             name = "GitHubPackages"
             url = uri("https://maven.pkg.github.com/juamemmen/Audit4Improve-API")         
+
             credentials {
             //las propiedades gpr.user y gpr.key están configuradas en gradle.properties en el raiz del proyecto, y se añade a .gitignore para que no se suban
             //O bien configuro las variables de entorno GITHUB_LOGIN y GITHUB_PACKAGES
@@ -42,6 +44,7 @@ publishing {
         
             groupId = 'us.mitfs.samples'
             artifactId = 'a4i'
+
             version = '0.0.1-juamemmen'
 
             from components.java
@@ -49,7 +52,9 @@ publishing {
        
     }
 }
+
 version = '0.0.1-juamemmen'
+
 tasks.withType(JavaCompile) {
     //Añadir la opción Xlint
     options.deprecation = true
@@ -128,13 +133,12 @@ dependencies {
 
 }
 
-/*test {
+test {
 	useJUnitPlatform()
 	testLogging {
 		events "passed", "skipped", "failed"
 	}
 }
-*/
 
 
 
