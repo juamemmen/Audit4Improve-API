@@ -26,10 +26,6 @@ jobs:
         run: |
           chmod +x gradlew        
           ./gradlew assemble
-          - run: echo "Nombre del repositorio: ${{ github.repository }}"
-          - run: echo "Evento disparador: ${{ github.event_name }}"
-          - run: echo "Rama correspondiente: ${{ github.ref }}"
-          - run: echo "Versión del runner: ${{ runner.version }}"
 
 
 
